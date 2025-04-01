@@ -1,0 +1,96 @@
+/* General Styles */
+/* Add smooth fade-in animation */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Improve button hover effect */
+button {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Center text content */
+#greeting, #order-summary, #delivery-date, #thank-you {
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 10px 20px;
+}
+
+/* Button Styles */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Div Styling */
+div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Footer or Thank You Message */
+#thank-you {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: green;
+}
