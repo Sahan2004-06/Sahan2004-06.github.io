@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('783472.jpg'); /* Replace with your image file name */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.content {
+    position: absolute;
+    top: 0; /* Aligns the text to the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the text horizontally */
+    color: white; /* Makes the text stand out */
+    text-align: center;
+    padding: 20px; /* Adds some spacing from the top */
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h1 {
+    color: #ff5733; /* Change this to your desired color */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.greeting {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark gray for contrast */
+    margin-bottom: 10px; /* Add spacing below the greeting */
+}
