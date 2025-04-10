@@ -1,0 +1,34 @@
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('your-image.jpg'); /* Replace with your image file name */
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+.content {
+    position: absolute;
+    top: 0; /* Aligns the text to the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the text horizontally */
+    color: white; /* Makes the text stand out */
+    text-align: center;
+    padding: 20px; /* Adds some spacing from the top */
+}
+h1 {
+    color: #ff5733; /* Change this to your desired color */
+}
+</style>
