@@ -340,6 +340,82 @@
       margin-bottom: 1rem;
     }
 
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .project-card {
+      background: var(--bg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .project-card:hover { background: var(--accent-light); }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .project-link {
+      font-size: 1rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .project-link:hover { color: var(--accent); transform: translate(2px, -2px); }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .stack-tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
     /* ── ABOUT ── */
     .about-grid {
       display: grid;
@@ -552,12 +628,23 @@
   <section id="projects">
     <div class="section-label">What I've built</div>
     <h2>Projects</h2>
-    <div class="projects-placeholder">
-      <div class="coming-tag">Coming Soon</div>
-      <p>
-        Projects are actively in development.<br>
-        Check back soon — or visit my <a href="https://github.com/Sahan2004-06" style="color:var(--accent);">GitHub</a> to see what's being built.
-      </p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-tag">Cybersecurity Tool</div>
+          <a href="https://sahan2004-06.github.io/password-analyzer.html" target="_blank" class="project-link">↗</a>
+        </div>
+        <h3 class="project-title">PassGuard — Password Analyzer</h3>
+        <p class="project-desc">
+          A real-time password strength analyzer that checks length, complexity, common password lists, and estimated crack time. Features local password history tracking to prevent reuse.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">localStorage</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -582,7 +669,7 @@
       <div class="about-facts">
         <div class="fact-row">
           <div class="fact-label">Status</div>
-          <div class="fact-value">CS Student, NY</div>
+          <div class="fact-value">CS Student, NJ</div>
         </div>
         <div class="fact-row">
           <div class="fact-label">Focus</div>
@@ -649,4 +736,4 @@
 
     // Skill bar widths
     document.querySelectorAll('.skill-bar-fill').forEach(bar => {
-      const w = 
+      const w =
