@@ -416,6 +416,27 @@
       letter-spacing: 0.04em;
     }
 
+    .project-preview {
+      overflow: hidden;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+    }
+
+    .project-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.4s ease;
+      opacity: 0.85;
+    }
+
+    .project-card:hover .project-preview img {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+
     /* ── ABOUT ── */
     .about-grid {
       display: grid;
@@ -564,7 +585,7 @@
     <span class="hero-tag">Available for opportunities</span>
     <h1>Hi, I'm <span class="name-accent">Sahan.</span><br>CS Student &<br>Aspiring Security Engineer.</h1>
     <p class="hero-desc">
-      Building toward a career in cybersecurity. Currently studying Computer Science in New York — focused on systems, security fundamentals, and building real projects from scratch.
+      Building toward a career in cybersecurity. Currently studying Computer Science in New Jersey — focused on systems, security fundamentals, and building real projects from scratch.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -644,6 +665,9 @@
           <span class="stack-tag">JavaScript</span>
           <span class="stack-tag">localStorage</span>
         </div>
+      </div>
+      <div class="project-preview">
+        <img src="passguard-preview.png" alt="PassGuard Password Analyzer preview" />
       </div>
     </div>
   </section>
