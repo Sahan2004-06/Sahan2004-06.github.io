@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet — Solar System Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --accent: #4FC3F7; }
+    body { background: #050510; }
+
+    .detail-page { min-height: 100vh; }
+
+    .detail-hero {
+      display: flex; height: 100vh;
+      background: linear-gradient(135deg, #080818 0%, #050510 100%);
+    }
+
+    #detail-canvas-wrap {
+      flex: 0 0 58%;
+      position: relative;
+      background: transparent;
+    }
+
+    #detail-canvas { width: 100%; height: 100%; display: block; }
+
+    .detail-panel {
+      flex: 0 0 42%;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 7rem 3.5rem 3rem 2rem;
+      overflow-y: auto;
+      border-left: 1px solid rgba(100,100,200,0.08);
+    }
+
+    @media (max-width: 900px) {
+      .detail-hero { flex-direction: column; height: auto; }
+      #detail-canvas-wrap { flex: none; width: 100%; height: 70vw; min-height: 280px; }
+      .detail-panel { flex: none; padding: 2rem 1.5rem 3rem; border-left: none; border-top: 1px solid rgba(100,100,200,0.08); overflow: visible; }
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<a class="back-btn" href="index.html">← Back to Solar System</a>
+
+<div class="detail-page">
+  <div class="detail-hero">
+    <div id="detail-canvas-wrap">
+      <canvas id="detail-canvas"></canvas>
+    </div>
+    <div class="detail-panel">
+      <span class="detail-tag" id="detail-tag"></span>
+      <h1 class="detail-name" id="detail-name"></h1>
+      <p class="detail-subtitle" id="detail-subtitle"></p>
+      <p class="detail-desc" id="detail-desc"></p>
+
+      <div class="detail-stats" id="detail-stats"></div>
+
+      <div class="detail-atmo">
+        <span class="detail-atmo-label">Atmospheric Composition</span>
+        <span class="detail-atmo-value" id="detail-atmo-value"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Moons -->
+  <div class="detail-section" id="moons-section">
+    <h2 class="section-title">
+      Moons <span id="moon-count"></span>
+    </h2>
+    <div class="moons-grid" id="moons-grid"></div>
+  </div>
+
+  <!-- Facts -->
+  <div class="detail-section">
+    <h2 class="section-title">Key Facts</h2>
+    <div class="facts-list" id="facts-list"></div>
+  </div>
+
+  <!-- Planet nav -->
+  <div class="planet-nav" id="planet-nav"></div>
+
+  <footer class="footer">
+    Built with Three.js &nbsp;·&nbsp; Orbital data from NASA JPL &nbsp;·&nbsp; Textures by Jerome Etienne
+  </footer>
+</div>
+
+<script type="module" src="js/planet.js"></script>
+</body>
+</html>

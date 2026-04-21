@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Solar System</div>
+  <div class="nav-planets" id="nav-planets"></div>
+</nav>
+
+<section id="hero">
+  <canvas id="solar-map"></canvas>
+  <div class="hero-overlay">
+    <h1 class="hero-title">Solar System</h1>
+    <p class="hero-sub">Explore our cosmic neighborhood</p>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll to Explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+  <div id="planet-tooltip" class="planet-tooltip hidden"></div>
+</section>
+
+<!-- Planet sections injected by JS -->
+<div id="planet-sections"></div>
+
+<footer class="footer">
+  Built with Three.js &nbsp;·&nbsp; Orbital data from NASA JPL &nbsp;·&nbsp; Textures by Jerome Etienne
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
